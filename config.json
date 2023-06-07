@@ -1,0 +1,40 @@
+{
+	"maxConnectionsPerIp": 16,
+	"maxConnections": 9007199254740991,
+    "AntiBot": false,
+    "AntiBanBypass": false,
+    "CountryBan": false,
+    "ignoreErrors": true,
+	"isReplit": true,
+	"antiProxy": {
+		"status": false,
+		"vpnCheck": false,
+		"limit": 1000
+	},
+	"port": 9001,
+	"maxNickLength": 16,
+	"messages": {
+		"unbanMessage": "If you were banned falsely, dm flixx#7396",
+		"closeMsg": "Server is restarting...",
+		"defaultBanReason": "No reason"
+	},
+	"bucket": {
+		"pixel": {
+			"none": [0, 1],
+			"user": [100, 2],
+			"mod": [160, 1],
+			"admin": [1, 0]
+		},
+		"chat": {
+			"none": [4, 6],
+			"user": [4, 6],
+			"mod": [32, 0],
+			"admin": [32, 0]
+		}
+	},
+	"captcha": {
+        "enabled": false,
+		"security": 0,
+		"clientSideVerificationKey": "CaptchA"
+	}
+}

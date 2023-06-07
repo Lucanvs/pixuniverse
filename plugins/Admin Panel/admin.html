@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title>YWOP Admin</title>
+	</head>
+	<body>
+		<div id="tablist">
+			<label class="big title">YWOP</label><label class="small italic candara">/admin</label>
+			<br>
+			<button class="tabbtn" id="tabbtn-onlineplayers">Online players (0)</button><br>
+			<button class="tabbtn" id="tabbtn-pixellogs">Pixel logs</button><br>
+			<button class="tabbtn" id="tabbtn-infocollection">Info collection</button><br>
+		</div>
+		<div id="content">
+			<div class="tab" id="tab-onlineplayers">
+				<label>1</label>
+			</div>
+			<div class="tab" id="tab-pixellogs" hidden>
+				<label>2</label>
+			</div>
+			<div class="tab" id="tab-infocollection" hidden>
+				<input placeholder="IP or ID..." maxlength="15" type="text"></input>
+				<button>Get messages</button>
+				<button>Get information</button>
+				<button>Get pixel logs</button>
+				<button>Address info</button>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var tabs = document.querySelectorAll('.tab');
+		var tabbtns = document.querySelectorAll('.tabbtn');
+
+		for(let i in tabbtns) {
+			let btn = tabbtns[i];
+			btn.onclick = () => {
+				for(let i in tabs) tabs[i].hidden = true;
+				document.getElementById(btn.id.replace('btn', '')).hidden = false;
+			};
+		};
+	</script>
+	<style type="text/css">
+		html,
+		body {
+			margin: 0;
+		}
+		#content {
+			width: 91.2%;
+    		height: 100%;
+    		position: absolute;
+    		top: 0;
+    		right: 0;
+    		margin-right: 0px;
+    		overflow-y: scroll;
+    		overflow-x: hidden;
+		}
+		#tablist {
+			max-width: 150px;
+			width: 100%;
+			text-align: left;
+			height: 100%;
+		}
+		button {
+			width: 120px;
+			height: 20px;
+			border: 1px solid gray;
+			background: none;
+		}
+		.big {
+			font-size: 26px;
+		}
+		.small {
+			font-size: 15px;
+		}
+		.italic {
+			font-style: italic;
+		}
+		.candara {
+			font-family: Candara;
+		}
+		.title {
+			font-family: Georgia;
+		}
+	</style>
+</html>
